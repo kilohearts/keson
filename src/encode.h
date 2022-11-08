@@ -19,9 +19,9 @@ namespace keson
     static const uint32_t Flag_CRLF_NEWLINES        = (1 << 8);
     static const uint32_t Flag_INDENT_WITH_SPACES   = (1 << 9);
 
-    static const uint32_t Flags_JSON_STYLE_QUOTES = Flag_QUOTE_KEYS | Flag_QUOTE_STRING_VALUES;
-    static const uint32_t Flags_PTREE_STYLE_QUOTES = Flag_QUOTE_KEYS | Flag_QUOTE_STRING_VALUES | Flag_QUOTE_NUMERIC_VALUES | Flag_QUOTE_BOOLEAN_VALUES;
-    static const uint32_t Flags_RELAXED_QUOTES = Flag_FLEXIBLE_QUOTES | Flag_EXTENDED_SAFE_CHARS;
+    static const uint32_t Flags_JSON_STYLE_QUOTES   = Flag_QUOTE_KEYS | Flag_QUOTE_STRING_VALUES;
+    static const uint32_t Flags_PTREE_STYLE_QUOTES  = Flag_QUOTE_KEYS | Flag_QUOTE_STRING_VALUES | Flag_QUOTE_NUMERIC_VALUES | Flag_QUOTE_BOOLEAN_VALUES;
+    static const uint32_t Flags_RELAXED_QUOTES      = Flag_FLEXIBLE_QUOTES | Flag_EXTENDED_SAFE_CHARS;
 
     class Writer;
     class Node;
@@ -64,18 +64,18 @@ namespace keson
 
         MapWriter map();
 
-        void operator=(const std::string& value);;
-        void operator=(int8_t value);
-        void operator=(uint8_t value);
-        void operator=(int16_t value);
-        void operator=(uint16_t value);
-        void operator=(int32_t value);
-        void operator=(uint32_t value);
-        void operator=(int64_t value);
-        void operator=(uint64_t value);
-        void operator=(float value);
-        void operator=(double value);
-        void operator=(bool value);
+        void operator=(const std::string&  value);
+        void operator=(int8_t              value);
+        void operator=(uint8_t             value);
+        void operator=(int16_t             value);
+        void operator=(uint16_t            value);
+        void operator=(int32_t             value);
+        void operator=(uint32_t            value);
+        void operator=(int64_t             value);
+        void operator=(uint64_t            value);
+        void operator=(float               value);
+        void operator=(double              value);
+        void operator=(bool                value);
 #if KESON_ENABLE_WSTRING
         void operator=(const std::wstring& value);
 #endif
